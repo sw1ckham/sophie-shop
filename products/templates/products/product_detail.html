@@ -37,22 +37,17 @@
                     {% endif %}
                     <p class="mt-3">{{ product.description }}</p>
 
-
-
-                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
+                            <div class="col-12">
                                 <button class="btn btn-black text-upperclass" type="submit">
                                     Add to cart
                                 </button>
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                </form>
-
-
-
+                    </form>
                 </div>
             </div>
         </div>

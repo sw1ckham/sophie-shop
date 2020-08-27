@@ -44,19 +44,19 @@
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                        <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+                                        <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
                                 </td>
                             </tr>
                             <tr>
@@ -89,3 +89,8 @@
             </div>
         </div>
 {% endblock %}
+
+{% block postloadjs %}
+{{  block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+{% endbloc %}
