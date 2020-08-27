@@ -5,7 +5,7 @@ from .models import Product
 
 def all_wordpress_templates(request):
 
-    products = Product.objects.all()
+    products = Product.objects.filter(category=1)
 
     context = {
         'products': products,
@@ -16,7 +16,7 @@ def all_wordpress_templates(request):
 
 def all_wordpress_themes(request):
 
-    products = Product.objects.all()
+    products = Product.objects.filter(category=2)
 
     context = {
         'products': products,
@@ -27,7 +27,7 @@ def all_wordpress_themes(request):
 
 def all_squarespace_templates(request):
 
-    products = Product.objects.all()
+    products = Product.objects.filter(category=4)
 
     context = {
         'products': products,
@@ -38,7 +38,7 @@ def all_squarespace_templates(request):
 
 def all_squarespace_plugins(request):
 
-    products = Product.objects.all()
+    products = Product.objects.filter(category=3)
 
     context = {
         'products': products,
