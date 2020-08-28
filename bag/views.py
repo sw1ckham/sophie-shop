@@ -13,12 +13,12 @@ def view_bag(request):
 def add_to_bag(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = 1
+    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
-        bag[item_id][quantity] += quantity
+        bag[item_id] += quantity
         messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
     else: 
         bag[item_id] = quantity
@@ -31,11 +31,8 @@ def add_to_bag(request, item_id):
 def adjust_bag(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = request.POST.get('quantity')
+    quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
-
-    print(quantity)
-    print(type(quantity))
 
     if quantity > 0:
         bag[item_id] = quantity
@@ -61,6 +58,9 @@ def remove_from_bag(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+
+
+ 
 
 
     
