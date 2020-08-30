@@ -1,1 +1,1 @@
-web: gunicorn sophie-shop.wsgi:application
+web: gunicorn sophieshop.wsgi:application
