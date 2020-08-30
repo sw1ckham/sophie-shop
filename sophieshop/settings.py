@@ -28,7 +28,7 @@ SECRET_KEY = 'pdbmxwi6d437p6uqlc&rd0_98tk3j*#5i-se(no*9ju4^^+(n4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sphwick@gmail.com-sophies-shop.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['sophies-shop.herokuapp.com', 'localhost']
 
 
 # Application definition
