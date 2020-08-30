@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 
     # other
     'crispy_forms',
-    'storages'
+    'storages',
 ]
 
 MIDDLEWARE = [
