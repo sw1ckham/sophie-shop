@@ -9,37 +9,26 @@ from .forms import ProductForm
 
 # Create your views here.
 
-def all_wordpress_templates(request):
+# def all_wordpress_templates(request):
 
-    products = Product.objects.filter(category=1)
+#     products = Product.objects.filter(category=1)
 
-    context = {
-        'products': products,
-    }
+#     context = {
+#         'products': products,
+#     }
 
-    return render(request, 'products/wordpress_templates.html', context)
-
-
-def all_wordpress_themes(request):
-
-    products = Product.objects.filter(category=2)
-
-    context = {
-        'products': products,
-    }
-
-    return render(request, 'products/wordpress_themes.html', context)
+#     return render(request, 'products/wordpress_templates.html', context)
 
 
-def all_squarespace_templates(request):
+# def all_wordpress_themes(request):
 
-    products = Product.objects.filter(category=4)
+#     products = Product.objects.filter(category=2)
 
-    context = {
-        'products': products,
-    }
+#     context = {
+#         'products': products,
+#     }
 
-    return render(request, 'products/squarespace_templates.html', context)
+#     return render(request, 'products/wordpress_themes.html', context)
 
 
 def all_squarespace_plugins(request):

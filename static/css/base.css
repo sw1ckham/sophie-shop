@@ -3,11 +3,42 @@ html {
 }
 
 body {
-    background: #b4740a;
+    background: #ffebcd52;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 184px);
     color: #555;
     font-family: 'Playfair Display';
+}
+
+#bannerimage {
+  width: 100%;
+  height: calc(100vh - 84px);
+  background-position: center;
+}
+
+/* -------------- Navbar */
+
+#topnav {
+   font-family: 'Quicksand', sans-serif; 
+}
+
+#main-nav {
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+
+@media (min-width: 1024px) {
+    .navbar {
+        padding: 0px;
+    }
+}
+
+/* --------------- footer */
+
+footer {
+    background: #ffebcd;
+    height: 300px;
 }
 
 /* from Bulma */
@@ -25,6 +56,11 @@ body {
 
 .main-logo-link {
     width: fit-content;
+}
+
+.logo {
+    max-width: 150px;
+    max-height: 100px;
 }
 
 /* ------------------------consistent buttons */
@@ -270,14 +306,14 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 84px;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 84px;
     }
 
     body {

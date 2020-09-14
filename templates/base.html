@@ -15,7 +15,7 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@300&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -35,27 +35,47 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Sophie's Shop {% block extra_title %}{% endblock %}</title>
+    <title>Plugin Store {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div id="topnav" class="row justify-content-between bg-white pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Sophie's</strong> shop</h2>
+                    <img class="logo" src="media/logo-brand-transparent.png" alt="Sophie's logo">
+                </a>
+            </div>
+            <div class="logo-font nav-item dropdown col-12 col-md-3 my-auto py-1 py-lg-0">
+                <a class="logo-font nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    How to build your website
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                    <a href="" class="dropdown-item">Free Consultation</a>
+                    <a href="" class="dropdown-item ">Creation</a>
+                    <a href="" class="dropdown-item ">Installation</a>
+                    <a href="" class="dropdown-item">Support</a>
+                </div>
+            </div>
+            <div class="logo-font nav-item dropdown col-12 col-lg-2 my-auto py-1 py-lg-0">
+                <a class="logo-font nav-link text-black" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Squarespace
+                </a>
+                <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                    <a href="" class="dropdown-item">Packages</a>
+                    <a href="{% url 'squarespace_plugins' %}" class="dropdown-item">Plug ins</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-1 my-auto py-1 py-lg-0">
+                <a href="" class="logo-font nav-link text-black" id="about-link">
+                    About
+                </a>
+            </div>
+            <div class="col-12 col-lg-1 my-auto py-1 py-lg-0">
+                <a href="" class="logo-font nav-link text-black" id="contact-link">
+                    Contact
                 </a>
             </div>
             <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
-                <a href="" class="logo-font font-weight-bold nav-link text-black mr-5" id="about-link">
-                    Get to know us
-                </a>
-            </div>
-            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
-                <a href="" class="logo-font font-weight-bold nav-link text-black mr-5" id="contact-link">
-                    Contact Me
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -125,6 +145,12 @@
 
     {% block content %}
     {% endblock %}
+
+        <footer>
+        <div class="h-100 mx-auto">
+            <p class="text-center">© Sophie Wickham Web Developer</p>
+        </div>
+    </footer>
 
     {% block postloadjs %}
     <script type="text/javascript">
