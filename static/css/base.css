@@ -8,12 +8,16 @@ body {
     height: calc(100vh - 184px);
     color: #555;
     font-family: 'Playfair Display';
+    position: relative;
 }
 
 #bannerimage {
   width: 100%;
   height: calc(100vh - 84px);
   background-position: center;
+  position: absolute;
+  top: 84px;
+  left: 0;
 }
 
 /* -------------- Navbar */
@@ -39,6 +43,12 @@ body {
 footer {
     background: #ffebcd;
     height: 300px;
+}
+
+/* ------------  front-page */
+
+.video {
+    margin-left: 50%;
 }
 
 /* from Bulma */

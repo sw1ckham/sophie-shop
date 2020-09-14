@@ -10,8 +10,15 @@
 {% endblock %}
 
 {% block content %}
-    <div>
-        <img id="bannerimage" src="media/homepage-7.png" alt="">
+    <div class="container-fluid w-100">
+        <div class="row">
+            <img id="bannerimage" src="media/homepage-7.png" alt="">
+            <div class="video col-12 col-md-6">
+                <video loop autoplay controls width="700" height="600">
+                    <source src="media/mockup-vid-2.mp4" type=video/mp4>
+                </video>
+            </div>
+        </div>
     </div>
     <div class="container h-100">
         <div class="row h-100">
