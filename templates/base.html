@@ -39,10 +39,10 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row justify-content-between bg-white pt-lg-2 d-none d-lg-flex">
+        <div id="navbar" class="row justify-content-between pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <img class="logo" src="media/logo-brand-transparent.png" alt="Sophie's logo">
+                    <img id="logo" class="logo" src="media/logo-7.png" alt="Sophie's logo">
                 </a>
             </div>
             <div class="logo-font nav-item dropdown col-12 col-md-3 my-auto py-1 py-lg-0">
@@ -155,6 +155,18 @@
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.height = "50px";
+            document.getElementById("logo").style.height = "25px";
+        } else {
+            document.getElementById("navbar").style.height = "84px";
+            document.getElementById("logo").style.height = "50px";
+        }
+        }
     </script>
     {% endblock %}
 
