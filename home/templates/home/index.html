@@ -11,15 +11,15 @@
 
 {% block content %}
 
-    <div class="container-fluid w-100">
-    <img class="d-none d-md-block" id="bannerimage" src="media/frontpage-3.png" alt="">
-        <div class="row">
+    <div class="container-fluid min-vh-100 w-100">
+    <!-- <img class="d-none d-md-block" id="bannerimage" src="media/frontpage-3.png" alt=""> -->
+        <div class="row h-100">
             <div class="col-12 col-lg-5 d-flex align-self-center ml-3">
                 <h1 class="text-black">
                     Creating beautiful solutions to advertising your business through Squarespace and Wordpress
                 </h1>
             </div>
-            <div class="video col-12 col-lg-6 w-100 text-center d-flex align-self-center">
+            <div class="video col-12 col-lg-6 text-center d-flex align-self-center">
                 <!-- <video loop autoplay width="700" height="600" name="Video Name">
                     <source src="media/video-mov-4.mov">
                 </video> -->
@@ -27,22 +27,50 @@
             </div>
         </div>
     </div>
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h2 class="display-4 text-black">
-                    Here to help you build your kickass website
+
+    <div class="container-fluid min-vh-100 values tan-bg">
+        <div class="row min-vh-100 w-100 justify-content-center">
+            <div class="col-12">
+                <h2 class="display-4 text-black text-center">
+                    Values
+                </h2>
+            </div>
+            <div class="row h-100 w-100 justify-content-between">
+                <div class="col-3 my-auto text-center">
+                    <i class="fas fa-balance-scale fa-10x"></i>
+                </div>
+                <div class="col-3 my-auto text-center">
+                    <i class="fas fa-balance-scale fa-10x"></i>
+                </div>
+                <div class="col-3 my-auto text-center">
+                    <i class="fas fa-balance-scale fa-10x"></i>
+                </div>
+                <div class="col-3 my-auto text-center">
+                    <i class="fas fa-balance-scale fa-10x"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid min-vh-100 green-bg">
+        <div class="row h-100 justify-content-center">
+            <div class="col-12">
+                <h2 class="display-4 text-black text-center">
+                    Services
                 </h2>
             </div>
         </div>
     </div>
-    <div class="container h-100">
+
+    <div class="container-fluid min-vh-100 green-bg">
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h2 class="display-4 text-black">
-                    Here to help you build your kickass website
+            <div class="col-12">
+                <h2 class="display-4 text-black text-center">
+                    Testimonials
                 </h2>
             </div>
         </div>
     </div>
+
 {% endblock %}

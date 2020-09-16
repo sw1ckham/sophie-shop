@@ -4,7 +4,7 @@ html {
 
 body {
     /* background: #ffebcd52; */
-    background: #dbd1b9;
+    background-color: #dbd1b9;
     background-size: cover;
     height: calc(100vh - 180px);
     color: #555;
@@ -19,6 +19,10 @@ body {
   position: absolute;
   top: 84px;
   left: 0;
+}
+
+.container-fluid {
+    padding: 0px;
 }
 
 /* -------------- Navbar */
@@ -49,6 +53,17 @@ body {
     color: #7f867b;
 }
 
+
+/* ---------------- background-colours */
+
+.green-bg {
+    background-color: #d8e0bb!important;
+}
+
+.tan-bg {
+    background-color: #E0D6BB!important;
+}
+
 /* --------------- footer */
 
 footer {
@@ -61,6 +76,12 @@ footer {
 .video img {
     height: 500px;
     width: auto;
+}
+
+/* --------- Values */
+
+.fas {
+    color: #7f867b;
 }
 
 /* from Bulma */
